@@ -11,6 +11,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 // route guard
 import { AuthGuard } from './shared/guard/auth.guard';
 import { ClientregisterComponent } from './clientregister/clientregister.component';
+import { ClientlistComponent } from './clientlist/clientlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'clientregister', component: ClientregisterComponent, canActivate: [AuthGuard]},
+  { path: 'clientlist', component: ClientlistComponent, canActivate: [AuthGuard]},
   {
     path: 'welcome',
     component: WelcomeComponent,

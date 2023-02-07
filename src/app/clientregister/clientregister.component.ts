@@ -28,11 +28,23 @@ export class ClientregisterComponent implements OnInit {
     });
   }*/
 
+  selectedValue() {
+    const radios = Array.from(document.getElementsByName('luna')) as HTMLInputElement[];
+    let selectedValue = null;
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            selectedValue = radios[i].value;
+            break;
+        }
+    }
+    return selectedValue;
+  }
+
   submit() {
     const id = this.id;
     const cliente = (document.getElementById('2') as HTMLInputElement).value;
     const No_Orden = (document.getElementById('3') as HTMLInputElement).value;
-    const tipoLuna = (document.getElementById('4') as HTMLInputElement).value;
+    const tipoLuna = this.selectedValue();
     const fechaCompra = (document.getElementById('5') as HTMLInputElement).value;
     const fechaEntrega = (document.getElementById('6') as HTMLInputElement).value;
     const frase = (document.getElementById('7') as HTMLInputElement).value;
