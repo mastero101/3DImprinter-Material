@@ -18,6 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 
@@ -70,6 +71,7 @@ import { AuthService } from "./shared/services/auth.service";
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatCardModule,
     RouterModule.forRoot([])
   ],
   providers: [

@@ -2,12 +2,36 @@ div.app-sidenav-content {
     margin-top: 0em
 }
 
+mat-card {
+    margin-top: 8em;
+    @media screen and (max-width: 480px) {
+        margin-top: 19em;
+    }
+}
+
+mat-card.file {
+    margin-top: 1em;
+    @media screen and (max-width: 480px) {
+        max-width: 35em;
+    }
+}
+
 @media screen and (max-width: 480px) {
     div.app-sidenav-content {
         margin-top: -20em
     }
 }
 
+
 input {
-    margin-top: 1em;
+    margin-top: 1.35em;
+}
+
+div.file {
+    padding-left: 9em;
+}
+
+button {
+    margin-left: 9.5em;
+    margin-bottom: 2em;
 }

@@ -1,31 +1,46 @@
 <app-welcome>
   <div class="app-sidenav-content">
-    <div>
-        <input id="1" type="text" placeholder="ID" value="{{(id)+1}}">
-    </div>
-    <div>
-        <input id="2" type="text" placeholder="Cliente">
-    </div>
-    <div>
-        <input id="3" type="text" placeholder="No Orden">
-    </div>
-    <div>
-        <input id="4" type="text" placeholder="Tipo de Luna">
-    </div>
-    <br>
-    <div>
-        <p>Fecha de Compra</p>
-        <input id="5" type="date" style="margin-top: -0.8em;" placeholder="Fecha de Compra">
-    </div>
-    <br>
-    <div>
-        <p>Fecha de Entrega</p>
-        <input id="6" type="date" style="margin-top: -0.8em;" placeholder="Fecha de Entrega">
-    </div>
-    <br>
-    <div>
-        <textarea id="7" type="text" placeholder="Frase"></textarea>
-    </div>
+    <mat-card>
+        <div>
+            ID
+            <br>
+            <input id="1" type="text" placeholder="ID" value="{{id}}">
+        </div>
+        <div>
+            <input id="2" type="text" placeholder="Cliente">
+        </div>
+        <div>
+            <input id="3" type="text" placeholder="No Orden">
+        </div>
+        <br>
+        <div>
+            Tamaño Luna: <br>
+            <p>
+                <input type="radio" name="luna" id="4" value="11">11 Cm <br>
+                <input type="radio" name="luna" id="4" value="15">15 Cm <br>
+                <input type="radio" name="luna" id="4" value="20">20 Cm <br>
+            </p>
+        </div>
+        <br>
+        <div>
+            <p>Fecha de Compra</p>
+            <input id="5" type="date" style="margin-top: -0.8em;" placeholder="Fecha de Compra">
+        </div>
+        <br>
+        <div>
+            <p>Fecha de Entrega</p>
+            <input id="6" type="date" style="margin-top: -0.8em;" placeholder="Fecha de Entrega">
+        </div>
+        <br>
+        <div>
+            <textarea id="7" type="text" placeholder="Frase"></textarea>
+        </div>
+        <p style="color: white;">------------------------------------------------------------</p>
+    </mat-card>
+    <mat-card class="file">
+        <input type="file" name="" id="8">
+    </mat-card>
+    
     <br>
     <button shape="round" (click)="submit()">Enviar</button>
   </div>

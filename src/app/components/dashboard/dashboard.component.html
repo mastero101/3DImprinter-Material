@@ -16,10 +16,13 @@
       <!-- Main content -->
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="inner-adjust">
+          <mat-card class="header">
           <div class="pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">User Profile</h1>
           </div>
+          </mat-card>
           <!-- Show user data when logged in -->
+          <mat-card class="profile">
           <div class="row" *ngIf="authService.userData as user">
             <div class="col-md-12">
               <div class="media">
@@ -34,8 +37,10 @@
               </div>
             </div>
           </div>
+        </mat-card>
         </div>
       </main>
+      <mat-card class="log">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active">
@@ -49,6 +54,7 @@
           </a>
         </li>
       </ul>
+    </mat-card>
     </div>
   </div>
 </div>
