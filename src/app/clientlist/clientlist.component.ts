@@ -46,31 +46,31 @@ export class ClientlistComponent implements OnInit {
   
   getNombre() {
     const db = getDatabase();
-    const starCountR = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/id');
+    const starCountR = ref(db, '/1' + '/id');
       onValue(starCountR, (snapshot) => {
     this.id = 'Id: '+ snapshot.val();
     })
-    const starCountRe = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/No_Orden');
+    const starCountRe = ref(db, '/1' + '/No_Orden');
       onValue(starCountRe, (snapshot) => {
     this.orden = 'No Orden: ' + snapshot.val();
     })
-    const starCountRef = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/tipoLuna');
+    const starCountRef = ref(db, '/1' + '/tipoLuna');
       onValue(starCountRef, (snapshot) => {
     this.tipo = 'Tipo: ' + snapshot.val() + ' cm';
     })
-    const starCountRef1 = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/cliente');
+    const starCountRef1 = ref(db, '/1' + '/cliente');
       onValue(starCountRef1, (snapshot) => {
     this.nombre = 'Cliente: ' + snapshot.val();
     })
-    const starCountRef2 = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/fechaCompra');
+    const starCountRef2 = ref(db, '/1' + '/fechaCompra');
       onValue(starCountRef2, (snapshot) => {
     this.fechaC = 'Fecha Compra - ' + snapshot.val();
     })
-    const starCountRef3 = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/fechaEntrega');
+    const starCountRef3 = ref(db, '/1' + '/fechaEntrega');
       onValue(starCountRef3, (snapshot) => {
     this.fechaE = 'Fecha Entrega - ' + snapshot.val();
     })
-    const starCountRef4 = ref(db, '/-NNei3QctHRuXgeiNb4t' + '/frase');
+    const starCountRef4 = ref(db, '/1' + '/frase');
       onValue(starCountRef4, (snapshot) => {
     this.frase = 'Frase - ' + snapshot.val();
     })
@@ -78,31 +78,31 @@ export class ClientlistComponent implements OnInit {
 
   getNombre2() {
     const db = getDatabase();
-    const starCountR = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/id');
+    const starCountR = ref(db, '/2' + '/id');
       onValue(starCountR, (snapshot) => {
     this.id2 = 'Id: '+ snapshot.val();
     })
-    const starCountRe = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/No_Orden');
+    const starCountRe = ref(db, '/2' + '/No_Orden');
       onValue(starCountRe, (snapshot) => {
     this.orden2 = 'No Orden: ' + snapshot.val();
     })
-    const starCountRef = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/tipoLuna');
+    const starCountRef = ref(db, '/2' + '/tipoLuna');
       onValue(starCountRef, (snapshot) => {
     this.tipo2 = 'Tipo: ' + snapshot.val() + ' cm';
     })
-    const starCountRef1 = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/cliente');
+    const starCountRef1 = ref(db, '/2' + '/cliente');
       onValue(starCountRef1, (snapshot) => {
     this.nombre2 = 'Cliente: ' + snapshot.val();
     })
-    const starCountRef2 = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/fechaCompra');
+    const starCountRef2 = ref(db, '/2' + '/fechaCompra');
       onValue(starCountRef2, (snapshot) => {
     this.fechaC2 = 'Fecha Compra - ' + snapshot.val();
     })
-    const starCountRef3 = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/fechaEntrega');
+    const starCountRef3 = ref(db, '/2' + '/fechaEntrega');
       onValue(starCountRef3, (snapshot) => {
     this.fechaE2 = 'Fecha Entrega - ' + snapshot.val();
     })
-    const starCountRef4 = ref(db, '/-NNeqtyL4CbLE3OZLwPh' + '/frase');
+    const starCountRef4 = ref(db, '/2' + '/frase');
       onValue(starCountRef4, (snapshot) => {
     this.frase2 = 'Frase - ' + snapshot.val();
     })

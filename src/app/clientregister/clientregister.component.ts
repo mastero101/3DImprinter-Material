@@ -44,7 +44,7 @@ export class ClientregisterComponent implements OnInit {
 
   clave() {
     const db = getDatabase();
-    const starCountR = ref(db, '/1' + '/ids');
+    const starCountR = ref(db, '/i' + '/ids');
       onValue(starCountR, (snapshot) => {     
         this.ids = snapshot.val()
         this.ids = Number(this.ids);
@@ -72,12 +72,13 @@ export class ClientregisterComponent implements OnInit {
         frase
       });
       const dbs = getDatabase();
-      set(ref(dbs, '/1'), {
+      set(ref(dbs, '/i'), {
         ids
       });
     console.log(id, cliente, No_Orden, tipoLuna, fechaCompra, fechaEntrega, frase);
     alert('Guardado')
     this.ngOnInit()
+    window.location.reload()
   }
 
 }
