@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { getDatabase, ref, update, child, get, onValue, DataSnapshot } from 'firebase/database';
+import { getDatabase, ref, update, child, get, onValue } from 'firebase/database';
+
+import 'firebase/database';
 
 @Component({
   selector: 'app-clientlist',
@@ -106,14 +108,7 @@ export class ClientlistComponent implements OnInit {
     })
   }
 
-  /*getData() {
-    const db = getDatabase();
-    const star = ref(db,"/");
-    ref.on("value", (snapshot: DataSnapshot) => {
-      const data = snapshot.val();
-      // Aquí puedes acceder a los valores almacenados usando la clave correspondiente, por ejemplo:
-      this.id = data.id;
-      this.orden = data.orden;
-    });
-  }*/
+  getData() {
+    
+  }
 }

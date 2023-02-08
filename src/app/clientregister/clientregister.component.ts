@@ -11,11 +11,13 @@ import * as uuid from 'uuid';
 })
 export class ClientregisterComponent implements OnInit {
   id: any;
+  ids: any;
 
   constructor() { }
 
   ngOnInit() {
     this.id = Math.floor(Math.random() * 1000)
+    this.ids = this.clave()
   }
 
   /*getDatabase() {
@@ -40,8 +42,19 @@ export class ClientregisterComponent implements OnInit {
     return selectedValue;
   }
 
+  clave() {
+    const db = getDatabase();
+    const starCountR = ref(db, '/1' + '/ids');
+      onValue(starCountR, (snapshot) => {     
+        this.ids = snapshot.val()
+        this.ids = Number(this.ids);
+        console.log(this.ids)
+    })
+  }
+
   submit() {
     const id = this.id;
+    const ids = (document.getElementById('1.1') as HTMLInputElement).value;
     const cliente = (document.getElementById('2') as HTMLInputElement).value;
     const No_Orden = (document.getElementById('3') as HTMLInputElement).value;
     const tipoLuna = this.selectedValue();
@@ -49,7 +62,7 @@ export class ClientregisterComponent implements OnInit {
     const fechaEntrega = (document.getElementById('6') as HTMLInputElement).value;
     const frase = (document.getElementById('7') as HTMLInputElement).value;
     const db = getDatabase();
-      push(ref(db, '/'), {
+      set(ref(db, '/' + (ids) ), {
         id,
         cliente,
         No_Orden,
@@ -58,11 +71,13 @@ export class ClientregisterComponent implements OnInit {
         fechaEntrega,
         frase
       });
+      const dbs = getDatabase();
+      set(ref(dbs, '/1'), {
+        ids
+      });
     console.log(id, cliente, No_Orden, tipoLuna, fechaCompra, fechaEntrega, frase);
     alert('Guardado')
     this.ngOnInit()
   }
-
-  
 
 }
